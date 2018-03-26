@@ -690,7 +690,7 @@ function handleSpecialPages() {
                 $renamedItems.Add($pageWithDuplicateName, $null)
             }
             ElseIf($pageWithDuplicateName.StartsWith('Category:') -eq $false -and $content.TrimStart(' ').StartsWith('#REDIRECT')) {
-                $renamedPathArr = $content -split '\s*#REDIRECT\s+\[\[(.*)\]\]'
+                $renamedPathArr = $content -split '\s*#REDIRECT\s*\[\[(.*)\]\]'
                 $renamedName  = $renamedPathArr[1].Replace('_', ' ')
 
                 $renamedItems.Add($pageWithDuplicateName, $renamedName)
