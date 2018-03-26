@@ -19,7 +19,6 @@ param(
     [string]$vstsUserName,
     [Parameter(Mandatory=$True, HelpMessage="path where pandoc.exe resides <format: C:\pandoc\>")]
     [string]$pnPath
-    #[string]$pat = "2dqky6xxlx7jcbnzdva3bgfar7icqpcuwrhsnxmcs4dt4ldr2moq"
     )
 
 #input
