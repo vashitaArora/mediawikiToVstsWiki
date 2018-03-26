@@ -589,9 +589,13 @@ function convertAbsoluteMediWikiUrl($content) {
     #######################replace links#######################################
     # inline-style 
     # [](..."wikilinks")  
+    If($mediaWikiUrl -eq '' or $mediaWikiUrl -eq $null) {
+        return $content
+    }
+    
     $regexUrl = '<'+$mediaWikiUrl + '([^\)]*)>' 
     $newContent = $newContent -replace $regexUrl, '[$1]($1"wikilink")'
-     $regexUrl = '(\[)([^\]]*)(\])\('+ $mediaWikiUrl + '([^\)]*)\)' 
+    $regexUrl = '(\[)([^\]]*)(\])\('+ $mediaWikiUrl + '([^\)]*)\)' 
     $newContent = $newContent -replace $regexUrl, '[$2]($4"wikilink")'
 
     return $newContent
@@ -631,7 +635,6 @@ function convertWikiLinks($content) {
 function convertUrlsForCurrentPage($newContent) {
     
     $newContent = convertAbsoluteMediWikiUrl($newContent)
-    #$newContent = $newContent -replace 'https://vsowiki.com/index.php\?title=([^>]*)', '[$1]($1"wikilink")'
     $newContent = convertWikiLinks($newContent)
     ###########################################################################
 
