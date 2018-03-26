@@ -15,7 +15,20 @@ Steps:
     - Download MediaWiki package from https://www.mediawiki.org/wiki/Download
     - Copy the extracted mediawiki files to \htdocs
   
-  - Backup your existing mediawiki (https://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki)
+  Alternately, in your existing mediawiki, you change the LocalSettings.php to open it for public 
+  
+  $wgGroupPermissions['*']['read'] = true;
+  
+  - Backup your existing mediawiki (https://www.mediawiki.org/wiki/Manual:Restoring_a_wiki_from_backup#Import_the_database_backup)
+    - From the command line using mysqladmin
+    <pre>mysqladmin -u wikidb_user -p drop wikidb</pre>
+    Substituting as appropriate for wikidb_user and wikidb. The -p parameter will prompt you for the password.
+
+   - Then to create a new database:
+    <pre>mysqladmin -u wikidb_user -p create wikidb</pre>
+    - To import dump_of_wikidb.sql from the command line you simply do:
+      <pre>mysql -u wikidb_user -p wikidb < dump_of_wikidb.sql</pre>
+    
 
 2) Run the script with the following parameters:
     
