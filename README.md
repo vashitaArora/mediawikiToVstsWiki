@@ -17,6 +17,16 @@ Steps:
   
   - Backup your existing mediawiki (https://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki)
 
-2) Run the script
+2) Run the script with the following parameters:
+    
+    -mu : Your media wiki url <format: http://localhost:8080/mediawiki>, 
+    -ip : Your image backup location <format: C:\xampp\htdocs\mediawiki\images>, 
+    -u : mediawiki username <format: alias>,
+    -pwd : mediawiki password,
+    -au : mediawiki absolute url(can be different from mediawiki url provided above - to change absolute urls in content) <format: https://mywiki.com/index.php\?title=>, 
+    -o : output directory on disk <format: C:\anylocation\ >,
+    -r : vsts wiki clone url <format: https://myacct.visualstudio.com/proj/_git/proj.wiki>,
+    -vstsUserName : vsts username (Please provide PAT token if asked for password),
+    -pnPath : path where pandoc.exe resides <format: C:\pandoc\>
 
   
