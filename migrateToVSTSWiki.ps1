@@ -23,9 +23,9 @@ param(
 
 #input
 $mediaWikiCoreUrl = $mu + '/api.php?format=json&' #'http://localhost:8080/mediawiki1'
-$mediaWikiImageBackupPath = $ip #'C:\Users\vaaror\Documents\work\Backup1\images_03072018'
+$mediaWikiImageBackupPath = $ip 
 $mailToOrg = $mt #'@microsoft.com'
-$mediaWikiUrl = $au #https://vsowiki.com/index.php\?title=
+$mediaWikiUrl = $au 
 
 $userName = $u
 $password = ConvertTo-SecureString $pwd -AsPlainText -Force
@@ -34,9 +34,9 @@ $vstsWikiPATtoken = $c #""
 $vstsWikiRemoteUrl = $r
 $wikiName = $vstsWikiRemoteUrl|split-path -leaf
 $rootPath = $o
-$localMachinePath = $o + $wikiName + '\' #'C:\Users\vaaror\Documents\work\repo_new4\'
+$localMachinePath = $o + $wikiName + '\' 
 $patToken = $pat
-$pandocPAth = $pnPath #'C:\Users\vaaror\Documents\work\scripts\'
+$pandocPAth = $pnPath 
 
 #local
 $mediaWikiGetAllCatgoriesPartialUrl = 'list=allcategories&action=query&aclimit=500&'
