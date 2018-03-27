@@ -6,6 +6,8 @@ Prerequisites
 - git (https://git-scm.com/download/win)
 - Pandoc (https://github.com/jgm/pandoc/releases/tag/2.1.3)
 
+For creating sql backup of your existing mediawiki - https://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki
+
 Steps:
 1) In case you need to create a local media wiki server (Optional Step - required if your current media wiki is LDAP integrated, but preferred as it will speed things up)
   - creating a mediawiki server
