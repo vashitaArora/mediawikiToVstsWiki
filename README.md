@@ -8,7 +8,7 @@ Prerequisites
 
 For creating sql backup of your existing mediawiki - https://www.mediawiki.org/wiki/Manual:Backing_up_a_wiki
 Also take a backup of **all images** from:
-<media wiki install location>\images\ [For eg: C:\xampp\htdocs\mediawiki\images]
+ \<\<media wiki install location\>\>\images\ [For eg: C:\xampp\htdocs\mediawiki\images]
 
 Steps:
 1) In case you need to create a local media wiki server (Optional Step - required if your current media wiki is LDAP integrated, but preferred as it will speed things up)
