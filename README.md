@@ -54,4 +54,6 @@ Steps:
     
     -pnPath : path where pandoc.exe resides <format: C:\pandoc\>
 
+
+Note: Powershell has a limit of 260 characters for path. so good to have smaller path lenths
   
