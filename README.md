@@ -1,4 +1,4 @@
-# mediawikiToVstsWiki
+# How to use this tool
 
 Prerequisites
 - sql backup of your media-wiki + images (or a mediawiki without LDAP integration)
