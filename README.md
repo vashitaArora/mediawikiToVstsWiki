@@ -1,6 +1,6 @@
 # How to use this tool
 
-This tool allows you to migrate your content from Mediawiki to VSTS Wiki. It uses Pandoc for file conversion from mediawiki formats to markdown format and then ensures that links, images, hierarchy, etc. are created based on the VSTS Wiki architecture. Learn more about what is supported in this tool @ [migration details](migrationdetails.md)
+This tool allows you to migrate your content from Mediawiki to VSTS Wiki. It uses Pandoc for file conversion from mediawiki formats to markdown format and then ensures that links, images, hierarchy, etc. are created based on the VSTS Wiki architecture. Learn more about what is supported in this tool @ [migration details](Migrationdetails.md)
 
 Prerequisites
 - sql backup of your media-wiki + images (or a mediawiki without LDAP integration)
