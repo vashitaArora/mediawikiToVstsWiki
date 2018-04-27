@@ -106,7 +106,7 @@ function Invoke-Login($username, $password)
     if($object.login.result -eq 'NeedToken')
     {
         $uri = $mediaWikiCoreUrl
-        fotft
+        
         $body.action = 'login'
         $body.format = 'json'
         $body.lgname = $username
@@ -589,7 +589,7 @@ function convertAbsoluteMediWikiUrl($content) {
     #######################replace links#######################################
     # inline-style 
     # [](..."wikilinks")  
-    If($mediaWikiUrl -eq '' or $mediaWikiUrl -eq $null) {
+    If($mediaWikiUrl -eq '' -or $mediaWikiUrl -eq $null) {
         return $content
     }
     
