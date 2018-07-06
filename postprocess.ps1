@@ -79,6 +79,55 @@ function convertAbsoluteMediWikiUrl($content) {
     return $content
 }
 
+function replaceSlash($url)
+{
+    $url = $url -replace '\\', '/'
+   # $url = $url -replace '\/\(', '\('
+   # $url = $url -replace '/\)', '\)'
+
+    return $url 
+}
+
+function fixEncoding($url)
+{
+    return reverseReplaceSpecialCharacters $url
+}
+
+function reverseReplaceSpecialCharacters($pathName) {
+
+    #Encoded
+    $pathName = $pathName.Replace('%3A',':')
+    $pathName = $pathName.Replace('%3E','>')
+    #$pathName = $pathName.Replace('-','%2D')
+    $pathName = $pathName.Replace('%3C','<')
+    $pathName = $pathName.Replace('%7C','|')
+    $pathName = $pathName.Replace('%3F','?')
+    $pathName = $pathName.Replace('%22','"')
+    $pathName = $pathName.Replace('%2A','*')
+    #$pathName = $pathName.Replace('\', '%5C') #vaaror - added new make sure actual path characters are not changed - this is only for file names
+    return $pathName
+}
+
+function FixLinkFormat($url)
+{
+    #trim all but one leading slash
+    $url = $url.Trim('\')
+    $url = '\' + $url
+
+    $urlSection = $url -split '#'
+
+    $urlSection[0] = replaceSlash $urlSection[0]
+    $urlSection[0] = fixEncoding $urlSection[0]
+    
+    $url = $urlSection[0]
+    if($urlSection.Length -gt 1)
+    {
+        $url = $url + '#' + $urlSection[1]
+    }
+
+    return $url
+}
+
 function convertWikiLinks($content) {
     $parts = $content -split '(\[)([^\]]*)(\])(\()(((?!wikilink|\[|https:\/\/|http:\/\/).)*)"wikilink"(\))'
 
@@ -120,6 +169,8 @@ function convertWikiLinks($content) {
 
                 If($newPath.StartsWith($localMachinePath)) {
                     $wikiPath = $newPath.subString($localMachinePath.Length, $newPath.Length - $localMachinePath.Length - 3)
+                    $wikiPath = FixLinkFormat $wikiPath
+
                    
                     $parts[$pos] = $wikiPath #formatPageNameInLinks $parts[$pos]
                     $parts[$pos] = $parts[$pos] -replace '\(', '\(' # escape the characters in name
