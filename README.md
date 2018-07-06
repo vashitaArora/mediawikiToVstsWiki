@@ -38,24 +38,23 @@ Steps:
 
 2) Run the script with the following parameters:
     
-    -mu : Your media wiki url <format: http://localhost:8080/mediawiki>,
+    -mediWikiUrl : Your media wiki url for which credentails are provided/open wiki <format: http://localhost:8080/mediawiki>, 
     
-    -ip : Your image backup location <format: C:\xampp\htdocs\mediawiki\images>, 
+    -imageDiskPath : Your image backup location <format: C:\xampp\htdocs\mediawiki\images>, 
     
     -u : mediawiki username <format: alias>,
     
-    -pwd : mediawiki password,
+    -p : mediawiki password,
     
-    -au : mediawiki absolute url(can be different from mediawiki url provided above - to change absolute urls in content) <format: https://mywiki.com/index.php\?title=>, 
+    -o : output directory on disk <format: C:\anylocation\>,
     
-    -o : output directory on disk <format: C:\anylocation\ >,
+    -vstsWikiRemoteUrl : vsts wiki clone url <format: https://myacct.visualstudio.com/proj/_git/proj.wiki>,
     
-    -r : vsts wiki clone url <format: https://myacct.visualstudio.com/proj/_git/proj.wiki>,
+    -pandocPath :path where pandoc.exe resides <format: C:\pandoc\>,
+   
+    -vstsUserName : vsts username (Please provide PAT token when asked for password),
     
-    -vstsUserName : vsts username (Please provide PAT token if asked for password),
-    
-    -pnPath : path where pandoc.exe resides <format: C:\pandoc\>
-
+    -originalmMediaWikiUrl : mediawiki absolute url(can be different from mediawiki url provided above - to change absolute urls in content) <format: https://mywiki.com/index.php\?title=>, 
 
 Note: Powershell has a limit of 260 characters for path. so good to have smaller path lenths
   
