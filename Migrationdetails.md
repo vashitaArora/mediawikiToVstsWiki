@@ -9,7 +9,7 @@ This article details out:
 
 # Learnings
 
-Our [automation tool](https://github.com/vashitaArora/mediawikiToVstsWiki/blob/master/README.md) is built on [pandoc](pandoc.org).I have discussed our strategy and key decisions we made before the migration in this PPT for broader reference. 
+Our [automation tool](https://github.com/vashitaArora/mediawikiToVstsWiki/blob/master/README.md) is built on [pandoc](pandoc.org).I have discussed our strategy and key decisions we made before the migration in this [PPT](https://github.com/vashitaArora/mediawikiToVstsWiki/blob/master/VSOWiki-VSTSWiki-FeatureComparefrGitHub.pptx) for broader reference. 
 
 
 
