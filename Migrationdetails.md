@@ -1,8 +1,17 @@
-This document contains the details of the content migrated from mediawiki based [VSOWiki](https://vsowiki.com/) to markdown based [VSTSWiki](https://mseng.visualstudio.com/VSOnline/VS.in%20Social%20Collab/_wiki/wikis/VSOnline.wiki). This article details out:
+This document contains the details of the content migrated from mediawiki based [VSOWiki](https://vsowiki.com/) to markdown based [VSTSWiki](https://mseng.visualstudio.com/VSOnline/VS.in%20Social%20Collab/_wiki/wikis/VSOnline.wiki). We migrated around 3500 pages from VSOWiki to VSTS Wiki.
 
-1. Manual fixes
-2. Not supported
-3. Automated fixes
+This article details out:
+
+1. Learnings from the migration
+2. Manual fixes we had to do 
+3. Not supported formats even after the migration
+4. Automated fixes
+
+# Learnings
+
+Our automation tool is built on [pandoc](pandoc.org).I have discussed our strategy and key decisions we made before the migration in this PPT for broader reference. 
+
+
 
 
 # Manual fixes
