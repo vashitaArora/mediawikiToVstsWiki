@@ -1,15 +1,8 @@
 This document contains the details of the content migrated from mediawiki based [VSOWiki](https://vsowiki.com/) to markdown based [VSTSWiki](https://mseng.visualstudio.com/VSOnline/VS.in%20Social%20Collab/_wiki/wikis/VSOnline.wiki). This article details out:
-1. Coming soon
-2. Manual fixes
-3. Not supported
-4. Automated fixes
-5. List of Pages not migrated
 
-
-# Coming Soon
-Following features are coming soon in VSTS Wiki to ensure parity with mediawiki.
-1. VSTS Wiki currently does not support **templates**. We are working on migrating content templates i.e. when you invoke a template to clone content of a template on a page will be available in VSTS when we cutover VSTS Wiki migration. MVP of templates will be shipped in S134 Update.
-2. In-page **Table of content** is also currently not supported in VSTSWiki. This have this on our 3 sprint plan and we plan to ship it in S135 Update. 
+1. Manual fixes
+2. Not supported
+3. Automated fixes
 
 
 # Manual fixes
@@ -62,19 +55,15 @@ The following syntax or user experiences will not be supported or migrated to VS
 5. Mediawiki supports section edits i.e. you can edit a section instead of the whole page. This capability is not supported in VSTS Wiki.
 6. User pages in mediawiki will not be migrated to VSTS Wiki since mostly these pages are not containing useful information. There may be users who have some meaningful information on their user page. In such cases we expect users to migrate those pages manually.
 
-
 # Automated fixes
-
-Refer to the [following document](https://microsoft.sharepoint.com/teams/ALMSearch/VCCoreX/Shared%20Documents/Product%20Management/Wiki/MediaWiki%20Migration/VSOWiki-VSTSWiki-FeatureCompare.pptx?web=1) regarding the assumptions we made during this migration and what will be automated using the tool.
+In a nut shell, we automated the rest of the migration from mediawiki to VSTS wiki using http://pandoc.org/. 
 
 ## Content
-
 All content in mediawiki format will be viewable in markdown format.
-
 
 ## Hierarchy
 VSTS Wiki supports a very rich tree based hierarchical structure which mediawiki supports a graph based hierarchical structure that is constructed based on the category tree. The basic difference is that since mediawiki hierarchy is graph based you can have the same page be part of two different categories therefore it may appear under two different hierarchies in the tree. The migration tool translates and simplifies this hierarchy structure and transforms the graph based hierarchy into a tree based hierarchy. You may also find a node in tree called **Orphaned pages**. These are all the pages that are not linked to any hierarchy.
 
 
 
-
+Credits: http://pandoc.org/
